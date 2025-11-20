@@ -1,16 +1,73 @@
-<html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <div class="container">
-            <div>
-                <h3>HOME</h3>
-            </div>
-            <div>
-                <h3>AWAY</h3>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Colorful Scoreboard</title>
+<link rel="stylesheet" href="style.css" />
+<script defer src="script.js"></script>
+</head>
+<body>
+  <main class="scoreboard" role="main">
+
+    <section class="teams" aria-label="Teams">
+
+      <article class="team team--red" data-team="A">
+        <div class="avatar">T1</div>
+        <div class="meta">
+          <h3 class="team-name">Team 1</h3>
+          <p class="team-sub">Home</p>
         </div>
-        <script src="index.js"></script>
-    </body>
+        <div class="score-block">
+          <div class="score" id="scoreA">0</div>
+          <div class="controls">
+            <button class="btn btn--plus" data-action="inc" data-team="A">+1</button>
+            <button class="btn btn--accent btn--red" data-action="big" data-team="A">+3</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="team team--blue" data-team="B">
+        <div class="avatar">T2</div>
+        <div class="meta">
+          <h3 class="team-name">Team 2</h3>
+          <p class="team-sub">Away</p>
+        </div>
+        <div class="score-block">
+          <div class="score" id="scoreB">0</div>
+          <div class="controls">
+            <button class="btn btn--plus" data-action="inc" data-team="B">+1</button>
+            <button class="btn btn--accent btn--blue" data-action="big" data-team="B">+3</button>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <aside class="match-info" aria-label="Match information">
+      <div>
+        <div class="header-small">LIVE MATCH</div>
+        <div class="title">Friendly Exhibition</div>
+
+        <div class="timer" role="timer">
+          <div class="time-display" id="timeDisplay">12:00</div>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-card">Quarter <br><span id="period">1</span></div>
+          <div class="info-card">Crowd <br><span id="crowd">4,121</span></div>
+          <div class="info-card">Referee <br><span id="ref">J. Ortega</span></div>
+          <div class="info-card">Venue <br><span id="venue">Summit Arena</span></div>
+        </div>
+      </div>
+
+      <div class="footer-controls">
+        <button class="btn btn--muted" id="undoBtn">Undo</button>
+        <button class="btn btn--muted" id="resetBtn">Reset</button>
+      </div>
+    </aside>
+
+  </main>
+
+</body>
 </html>
