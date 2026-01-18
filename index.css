@@ -6,3 +6,7 @@ body {
     display: flex;
     justify-content: space-around;
 }
+
+h3 {
+   color: aquamarine; 
+}
