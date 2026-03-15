@@ -1,8 +1,12 @@
+/* Key Elements */
+
 body {
-    margin: 0;
+  margin: 0;
 }
 
+/* Classes */
+
 .container {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
